@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeetMetric | Track Your LeetCode Progress</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>LEETMETRIC</h1>
+            <p class="subtitle">Track your LeetCode progress</p>
+        </header>
+
+        <div class="user-container">
+            <h3>Enter your LeetCode username:</h3>
+            <div class="user-input-container">
+                <input type="text" placeholder="e.g. johnsmith" id="user-input">
+                <button id="search-btn">
+                    <span class="btn-text">Search</span>
+                    <div class="loader"></div>
+                </button>
+            </div>
+        </div>
+
+        <div class="results-wrapper hidden" id="results-wrapper">
+            <div class="stats-container">
+                <div class="progress">
+                    <div class="progress-item">
+                        <div class="circle easy-progress">
+                            <div class="circle-inner">
+                                <span id="easy-label"></span>
+                                <span class="label">Easy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="progress-item">
+                        <div class="circle medium-progress">
+                            <div class="circle-inner">
+                                <span id="medium-label"></span>
+                                <span class="label">Medium</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="progress-item">
+                        <div class="circle hard-progress">
+                            <div class="circle-inner">
+                                <span id="hard-label"></span>
+                                <span class="label">Hard</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-card-container">
+                    <!-- Cards will be populated by JS -->
+                </div>
+            </div>
+        </div>
+
+        <div class="error-message hidden" id="error-message">
+            <p>User not found or API error. Please check the username and try again.</p>
+        </div>
+
+        <footer>
+            <p>Made with ❤️ for LeetCoders</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
